@@ -580,13 +580,13 @@ class _FlashBarState extends State<FlashBar> with SingleTickerProviderStateMixin
       );
     }
 
-    if (widget.position == FlashPosition.top) {
-      final brightness = ThemeData.estimateBrightnessForColor(backgroundColor);
-      child = AnnotatedRegion<SystemUiOverlayStyle>(
-        value: brightness == Brightness.dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
-        child: child,
-      );
-    }
+    // if (widget.position == FlashPosition.top) {
+    //   final brightness = ThemeData.estimateBrightnessForColor(backgroundColor);
+    //   child = AnnotatedRegion<SystemUiOverlayStyle>(
+    //     value: brightness == Brightness.dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
+    //     child: child,
+    //   );
+    // }
 
     child = FadeTransition(
       opacity: widget.controller.controller,
